@@ -1,0 +1,104 @@
+<div class="container col-md-6">
+
+    <form  (ngSubmit)="saveProfile()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="article">Art.</label>
+          <!-- <em *ngIf="art.invalid && art.touched">Required</em> -->
+          <input [(ngModel)]="product.art" name="art" type="number" required class="form-control" id="article" placeholder="Art.">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="productPrice">Price</label>
+          <!-- <em *ngIf="price.invalid && price.touched">Required</em> -->
+          <input [(ngModel)]="product.price" name="price" type="number" class="form-control" id="productPrice" aria-describedby="productPrice" placeholder="Enter price">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="genderType">Gender type</label>
+          <!-- <em *ngIf="genderType.invalid && genderType.touched">Required</em> -->
+          <select [(ngModel)]="product.genderType" name="genderType" class="form-control" id="genderType">
+            <option>Man</option>
+            <option>Woman</option>
+            <option>Boys</option>
+            <option>Girls</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="productType">Type</label>
+          <!-- <em *ngIf="type.invalid && type.touched">Required</em> -->
+          <select [(ngModel)]="product.type"  name="type" class="form-control" id="productType">
+            <option>Classic</option>
+            <option>Sport</option>
+            <option>Balerinas</option>
+            <option>Heels</option>
+            <option>Boots</option>
+            <option>Sneakers</option>
+            <option>Sandals</option>
+            <option>Heels</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="productPhoto">Photo</label>
+            <!-- <em *ngIf="photo.invalid && photo.touched">Required</em> -->
+            <input [(ngModel)]="product.photo" name="photo" type="text" class="form-control" id="productPhoto" aria-describedby="productPhoto" placeholder="Enter photo url">
+        </div>
+        <div class="form-group">
+            <label for="productManufacturer">Manufacturer</label>
+            <!-- <em *ngIf="manufacturer.invalid && manufacturer.touched">Required</em> -->
+            <select [(ngModel)]="product.manufacturer" name="manufacturer" class="form-control" id="productManufacturer">
+              <option>Biana</option>
+              <option>Glecer</option>
+              <option>Pronto</option>
+              <option>Tuseki</option>
+              <option>Gemelli</option>
+              <option>Bella</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="productNum">Number of pairs</label>
+            <!-- <em *ngIf="leftPieces.invalid && leftPieces.touched">Required</em> -->
+            <input [(ngModel)]="product.leftPieces" name="leftPieces" type="number" class="form-control" id="productNum" aria-describedby="productNum" placeholder="Enter number">
+        </div>
+        <div class="form-group">
+            <label for="selSizes">Selected sizes</label>
+            <!-- <em *ngIf="leftPieces.invalid && leftPieces.touched">Required</em> -->
+            <input [(ngModel)]="product.availableSizesEU" name="selSizes" class="form-control" id="selSizes" aria-describedby="productNum" placeholder="Enter number">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="productSizes">Sizes</label>
+            <!-- <em *ngIf="availableSizesEU.invalid && availableSizesEU.touched">Required</em> -->
+            <select [(ngModel)]="product.availableSizesEU" name="avNumbers" multiple class="form-control input-sm" id="productSizes">
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+              <option>32</option>
+              <option>33</option>
+              <option>34</option>
+              <option>35</option>
+              <option>36</option>
+              <option>37</option>
+              <option>38</option>
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+
+</div>

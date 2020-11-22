@@ -1,0 +1,26 @@
+<div class="row col-md-11 py-2">
+    <div class="col-md-6">
+
+        <h1>Log In</h1>
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input (ngModel)="email" name="email" type="email" class="form-control text-muted" id="staticEmail">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input (ngModel)="password" name="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <a *ngIf="authService.isAuthenticated()" [routerLink]="['../create-product']">Create new poducts</a>
+    
+    </div>
+    
+    <profile-create></profile-create>
+</div>

@@ -1,0 +1,24 @@
+<div class="col-md-11 px-0 py-3" id="details">
+
+    <div class="row">
+        <div class="col-md-9">
+            <img [src]="product.photo" width="90%" />
+            <div *ngFor="let item of sibling">
+                <img [src]="item.photo" width="90%" />
+            </div>
+        </div>
+        <div class="col-md-3" id="details">
+            <h2>Product details</h2>
+            <div><strong>Art.: </strong>{{product.art}}</div>
+            <div><strong>Manufacturer: </strong>{{product.manufacturer}}</div>
+            <div><strong>Price: </strong>{{product.price | currency:'EUR'}}</div>
+            <div><strong>Sizes:</strong>{{product.availableSizesEU}}</div>
+            <div><button type="submit" class="btn btn-outline-warning my-3">Add to CART</button></div>
+            <div *ngIf="auth.isAuthenticated()">
+                <button [routerLink]="['/user/edit-product',product.id]" type="submit" class="btn btn-outline-warning my-3">Edit porduct</button>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

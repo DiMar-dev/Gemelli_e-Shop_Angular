@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/toastr/build/toastr.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/toastr/build/toastr.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gemelliShop"
+    }
+  },
+  "defaultProject": "gemelliShop",
+  "cli": {
+    "analytics": "e815de1c-ae88-449a-9c1a-41bbdcb18807"
+  }
 }
